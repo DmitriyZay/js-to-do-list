@@ -1,13 +1,22 @@
-{{!
-Це код container файлу для index сторінки,
-в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
-}}
-
 <main>
-	{{>heading title="Index" info=data.test}}
+	<div class="form">
+		<h1 class="form__title">To-do list</h1>
+		<div class="form__input">
+			<input class="form__task" type="text"  placeholder="Ведіть задачу ..." >
+			<button class="form__button"> Додати</button>
+
+		</div>
+		<div class="form__list">
+
+		</div>
+	</div>
 </main>
 
-{{!
-    Цей код містить лише те, що буде виводитись в <body>
-    Адже наш layout/default.hbs має вже структуру HTML
-}}
+<template id="task">
+			<div class="form__list-task">
+				<span class="list-task__number"> 1.</span>
+				<span class="list-task__text">Some placeholder content in a paragraph below the heading and date.</span>
+				<button class="list-task__button list-task__button--do"> </button>
+				<button class="list-task__button list-task__button--cancel"> </button>
+			</div>
+</template>
